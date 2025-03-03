@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+  a(href="/reservas/create") Nueva Reserva 
+  <br>
+  <br> 
+  a(href="/reservas/read") Listado de Reservas 
+  <br>
+  <br> 
+  a(href="/reservas/read") Listado de Usuarios
+  <br>
+  <br> 
+  a(href="/reservas/read") Listado de reservas
+  <br>
+  <br> 
+
+  
+  
+  table.table
+    thead
+      tr
+        th(scope="col") ID
+        th(scope="col") DESDE
+        th(scope="col") HASTA
+        th(scope="col") USER
+        th(scope="col") BICICLETA
+        th(scope="col")
+    tbody
+      each reserva in reservas
+        tr
+          td #{reserva._id}
+          td #{reserva.desde}
+          td #{reserva.hasta}
+          td #{reserva.usuario}
+          td #{reserva.bicicleta}
+          td 
+            a(href=`reservas/${reserva._id}/update`) Editar
+          td 
+            form.inline(method="post" action=`reservas/${reserva._id}/delete`)
+              input(type="hidden" name="id" value= `${reserva._id}`)
+              button.link-button(type="submit" name="submit_param" value="submit_value" class="btn")
+                = "Eliminar"

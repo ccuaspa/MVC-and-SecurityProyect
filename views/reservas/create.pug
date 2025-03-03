@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+  a(href='/reservas') Volver
+  
+  br
+  br
+  br
+  
+  h1 Nueva Reserva
+  
+  br
+  br
+  
+  form(action='/reservas/create' method='post')
+    label(for='desde') Desde:
+    input#desde(type='date' name='desde' required)
+    br
+    label(for='hasta') Hasta:
+    input#hasta(type='date' name='hasta' required)
+    br
+    label(for='bicicleta') Bicicleta ID:
+    input#bicicleta(type='text' name='bicicleta' placeholder='ID de la bicicleta' required)
+    br
+    label(for='usuario') Usuario ID:
+    input#usuario(type='text' name='usuario' placeholder='ID del usuario' required)
+    br
+    br
+    input.btn(type='submit' value='OK')

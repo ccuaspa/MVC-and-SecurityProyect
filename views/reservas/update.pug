@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+  a(href='/reservas') Volver
+  
+  br
+  br
+  br
+  
+  h1 Actualizar Reserva
+  
+  br
+  br
+  
+  form(action=`/reservas/${reserva._id}/update` method='post')
+    label(for='desde') Desde:
+    input#desde(type='date' name='desde' value=reserva.desde required)
+    br
+    label(for='hasta') Hasta:
+    input#hasta(type='date' name='hasta' value=reserva.hasta  required)
+    br
+    label(for='bicicleta') Bicicleta ID:
+    input#bicicleta(type='text' name='bicicleta' placeholder='ID de la bicicleta' value=reserva.bicicleta required)
+    br
+    label(for='usuario') Usuario ID:
+    input#usuario(type='text' name='usuario' placeholder='ID del usuario' value=reserva.usuario  required)
+    br
+    br
+    input.btn(type='submit' value='OK')

@@ -13,6 +13,7 @@
     "debug": "~2.6.9",
     "dotenv": "^16.4.7",
     "express": "~4.16.1",
+    "express-recaptcha": "^5.1.0",
     "express-session": "^1.18.1",
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^9.0.2",
@@ -23,7 +24,10 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "pug": "2.0.0-beta11",
-    "request": "^2.88.2"
+    "qrcode": "^1.5.4",
+    "request": "^2.88.2",
+    "speakeasy": "^2.0.0",
+    "tailwind": "^4.0.0"
   },
   "devDependencies": {
     "jasmine": "^5.4.0",

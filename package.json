@@ -32,7 +32,6 @@
   },
   "devDependencies": {
     "jasmine": "^5.4.0",
-    "mongoose": "^8.11.0",
     "nodemon": "^3.1.4",
     "tailwindcss": "^4.0.9"
   }

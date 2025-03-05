@@ -11201,3 +11201,13 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+.bg-banner {
+  background-image: url('/images/banner.webp');
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}

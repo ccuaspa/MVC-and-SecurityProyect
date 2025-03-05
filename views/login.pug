@@ -34,6 +34,10 @@ block content
           if errors.login
             small#loginHelp.text-danger= errors.login
           br
+          br
+          a(href='/auth/google') Log in mediante Google
+          br
+          br
           input#submitBtn.btn.btn-primary(type="submit" value="OK")
     div(class="static w-full bg-banner bg-cover bg-center")
       <div class="absoluted w-full h-full inset-0 bg-black bg-opacity-50"></div>

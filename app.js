@@ -217,6 +217,10 @@ app.post("/resetPassword", async function (req, res) {
   }
 });
 
+app.use("/privacy_policy", function(req,res){
+  res.sendFile("public/policy_privacy.html")
+})
+
 app.use("/", indexRouter);
 app.use("/login", loginRouter);
 app.use("/forgotPassword", forgotPasswordRouter);
